@@ -1,0 +1,332 @@
+<!-- 
+    FILE: about.html - About Us Page
+    
+    AUTHOR: George Papasotiriou
+    COURSE: ITC 4214 - Fullstack Web Design
+    PROJECT: ToMyPizza! Task Management Application
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about ToMyPizza! - Our story, team, and pizza philosophy in Athens, Greece.">
+    <meta name="keywords" content="about us, pizza history, team, Greek pizza, Athens, family recipes">
+    <meta name="author" content="George Papasotiriou">
+
+    <title>ToMyPizza! - About Us</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="ToMyPizza! Home">
+                <i class="fas fa-pizza-slice text-warning me-2" aria-hidden="true"></i>
+                <span class="brand-text">ToMyPizza!</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1" aria-hidden="true"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tasks.html">
+                            <i class="fas fa-tasks me-1" aria-hidden="true"></i> Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html" aria-current="page">
+                            <i class="fas fa-info-circle me-1" aria-hidden="true"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1" aria-hidden="true"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analytics.html">
+                            <i class="fas fa-chart-bar me-1" aria-hidden="true"></i> Analytics
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="form-check form-switch ms-lg-3 mt-2 mt-lg-0">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle" role="switch">
+                    <label class="form-check-label" for="darkModeToggle">
+                        <i class="fas fa-moon" aria-hidden="true"></i> Dark Mode
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-5" aria-label="About ToMyPizza!">
+        <div class="container">
+            <!-- About Section -->
+            <div class="row mb-5">
+                <div class="col-12 text-center mb-4">
+                    <h1 class="fw-bold display-4">Our Pizza Story</h1>
+                    <p class="lead">From a small oven in Athens to the fastest pizza delivery in Greece</p>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Fresh Greek pizza from ToMyPizza! with olives and feta cheese" 
+                         class="img-fluid rounded shadow" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">Welcome to ToMyPizza!</h2>
+                    <p>Founded in 1995 by Tony Romano, ToMyPizza! started as a small family-owned pizzeria in Athens with one simple mission: deliver the freshest, hottest pizza possible. Tony noticed that pizza always tasted best right out of the oven, so he created a revolutionary delivery system specifically for the streets of Athens.</p>
+                    <p>Today, we continue that legacy with our proprietary "Hot-Now" delivery system that ensures your pizza arrives at your door still bubbling hot from our ovens, whether you're in Aghia Paraskevi, Chalandri, or anywhere in Athens.</p>
+                    <div class="mt-4">
+                        <h3 class="fw-bold">Our Mission in Greece</h3>
+                        <p>To deliver authentic, restaurant-quality pizza at home, with the same temperature and freshness as if you were eating at our Athens pizzeria, combining traditional Italian techniques with Greek ingredients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h2 class="fw-bold text-center mb-4">Fresh from Our Athens Kitchen</h2>
+                    <div id="pizzaCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#pizzaCarousel" data-bs-slide-to="0" class="active" 
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#pizzaCarousel" data-bs-slide-to="1" 
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#pizzaCarousel" data-bs-slide-to="2" 
+                                    aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#pizzaCarousel" data-bs-slide-to="3" 
+                                    aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                     class="d-block w-100" alt="Classic Pepperoni Pizza with double pepperoni" 
+                                     style="height: 500px; object-fit: cover;" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5>Classic Pepperoni</h5>
+                                    <p>Our signature pizza with double pepperoni and mozzarella</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                     class="d-block w-100" alt="Margherita Pizza with fresh basil" 
+                                     style="height: 500px; object-fit: cover;" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5>Athens Margherita</h5>
+                                    <p>Fresh Greek basil, feta, mozzarella, and tomato sauce</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1552539618-7e79c6c3c772?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                     class="d-block w-100" alt="BBQ Chicken Pizza with grilled chicken" 
+                                     style="height: 500px; object-fit: cover;" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5>Greek BBQ Chicken</h5>
+                                    <p>Tangy BBQ sauce with grilled chicken and Kalamata olives</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1593246049226-ded77bf90326?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                                     class="d-block w-100" alt="Our kitchen in Athens preparing pizzas" 
+                                     style="height: 500px; object-fit: cover;" loading="lazy">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5>Our Athens Kitchen</h5>
+                                    <p>Where the magic happens - fresh ingredients, traditional methods</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#pizzaCarousel" 
+                                data-bs-slide="prev" aria-label="Previous slide">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#pizzaCarousel" 
+                                data-bs-slide="next" aria-label="Next slide">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="row mb-5">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold">Meet Our Athens Pizza Masters</h2>
+                    <p class="text-muted">The team that makes it all happen in Greece</p>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="team-avatar mb-3">
+                                <div class="avatar-placeholder bg-warning text-dark" aria-hidden="true">
+                                    <i class="fas fa-cheese fa-3x"></i>
+                                </div>
+                            </div>
+                            <h3 class="card-title h4">Tony Romano</h3>
+                            <p class="text-warning fw-medium">Founder & Head Chef</p>
+                            <p class="card-text">With over 28 years of pizza-making experience in Athens, Tony created the original ToMyPizza! recipe that's still used today. His secret feta and mozzarella blend is legendary across Greece!</p>
+                            <div class="pizza-decoration mt-3" aria-hidden="true">
+                                <i class="fas fa-cheese text-warning"></i>
+                                <i class="fas fa-fire text-danger mx-2"></i>
+                                <i class="fas fa-cheese text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="team-avatar mb-3">
+                                <div class="avatar-placeholder bg-success text-white" aria-hidden="true">
+                                    <i class="fas fa-truck fa-3x"></i>
+                                </div>
+                            </div>
+                            <h3 class="card-title h4">Maria Garcia</h3>
+                            <p class="text-success fw-medium">Delivery Director</p>
+                            <p class="card-text">Maria developed our revolutionary Athens delivery system that keeps pizza hot through Greek traffic. She holds the Athens record for fastest delivery: 8 minutes from oven to door!</p>
+                            <div class="pizza-decoration mt-3" aria-hidden="true">
+                                <i class="fas fa-bolt text-warning"></i>
+                                <i class="fas fa-clock text-info mx-2"></i>
+                                <i class="fas fa-bolt text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm hover-shadow">
+                        <div class="card-body text-center p-4">
+                            <div class="team-avatar mb-3">
+                                <div class="avatar-placeholder bg-primary text-white" aria-hidden="true">
+                                    <i class="fas fa-pizza-slice fa-3x"></i>
+                                </div>
+                            </div>
+                            <h3 class="card-title h4">Luca Rossi</h3>
+                            <p class="text-primary fw-medium">Quality Control Manager</p>
+                            <p class="card-text">Luca ensures every pizza meets our strict Greek-Italian standards. He's tasted over 50,000 pizzas in his career and sources the finest local ingredients from Athenian markets.</p>
+                            <div class="pizza-decoration mt-3" aria-hidden="true">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-check-circle text-success mx-2"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Values -->
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold">Our Pizza Principles in Greece</h2>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-fire fa-2x text-danger me-3" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="h4">Always Hot</h3>
+                            <p>We measure delivery success by pizza temperature, not just speed. Our insulated bags guarantee 85°C+ at your door anywhere in Athens.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-leaf fa-2x text-success me-3" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="h4">Greek Ingredients</h3>
+                            <p>Daily deliveries from Athenian markets ensure our vegetables, meats from local butchers, and dairy from Greek farms are always fresh.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-handshake fa-2x text-info me-3" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="h4">Athens Community First</h3>
+                            <p>We support local Athenian schools and charities. For every 100 pizzas sold, we donate one to Athens food banks and community centers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-recycle fa-2x text-warning me-3" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="h4">Sustainable in Athens</h3>
+                            <p>Our boxes are 100% recyclable and our delivery vehicles are electric to reduce our carbon footprint in the beautiful city of Athens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4" aria-label="Site footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4 class="fw-bold mb-0">
+                        <i class="fas fa-pizza-slice text-warning me-2" aria-hidden="true"></i>ToMyPizza!
+                    </h4>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2023 ToMyPizza!. Fresh pizza, fast delivery! | George Papasotiriou - ITC 4214</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
