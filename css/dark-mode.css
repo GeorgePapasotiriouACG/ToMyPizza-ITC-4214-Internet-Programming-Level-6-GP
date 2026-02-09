@@ -1,0 +1,391 @@
+/* 
+    FILE: dark-mode.css - Dark Mode Styles
+    CONTENTS:
+    1. Dark mode color overrides
+    2. Component dark mode adaptations
+    3. Chart styling for dark theme
+    4. Form elements in dark mode
+    5. Table and card dark styles
+    6. Map and image adjustments
+    7. Accessibility considerations
+    8. Transition effects
+    
+    AUTHOR: George Papasotiriou
+    COURSE: ITC 4214 - Fullstack Web Design
+    PROJECT: ToMyPizza! Task Management Application
+*/
+
+/* ===== DARK MODE OVERRIDES ===== */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Navigation */
+.dark-mode .navbar-light {
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .navbar-light .navbar-brand,
+.dark-mode .navbar-light .nav-link {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .navbar-light .nav-link:hover {
+    color: var(--primary-color) !important;
+    background-color: rgba(255, 107, 0, 0.15);
+}
+
+.dark-mode .navbar-light .nav-link.active {
+    color: var(--primary-color) !important;
+    background-color: rgba(255, 107, 0, 0.2);
+}
+
+.dark-mode .navbar-light .nav-link.active::after {
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.dark-mode .hero-section {
+    background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+}
+
+.dark-mode .hero-section::before {
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.2) 0%, transparent 70%);
+}
+
+/* Cards */
+.dark-mode .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .card-header {
+    background-color: #252525 !important;
+    border-bottom: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .card-title {
+    color: #e0e0e0;
+}
+
+/* Feature Icons */
+.dark-mode .feature-icon {
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.2) 0%, rgba(255, 107, 0, 0.3) 100%);
+}
+
+.dark-mode .feature-icon i {
+    color: var(--primary-color);
+}
+
+/* Tables */
+.dark-mode .table {
+    color: #e0e0e0;
+}
+
+.dark-mode .table th {
+    background-color: rgba(255, 107, 0, 0.1);
+    border-bottom-color: var(--primary-color);
+    color: #e0e0e0;
+}
+
+.dark-mode .table td {
+    border-bottom-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .table-hover tbody tr:hover {
+    background-color: rgba(255, 107, 0, 0.1);
+}
+
+.dark-mode .table-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.dark-mode .table-danger:hover {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+}
+
+/* Forms */
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+    background-color: #2d2d2d;
+    border-color: var(--primary-color);
+    color: #e0e0e0;
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.25);
+}
+
+.dark-mode .form-control::placeholder {
+    color: #888;
+}
+
+.dark-mode .form-text {
+    color: #aaa;
+}
+
+/* Buttons */
+.dark-mode .btn-outline-warning {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.dark-mode .btn-outline-warning:hover {
+    background-color: var(--primary-color);
+    color: #121212;
+}
+
+.dark-mode .btn-check:checked + .btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #121212;
+}
+
+/* Background colors */
+.dark-mode .bg-light {
+    background-color: #252525 !important;
+}
+
+.dark-mode .bg-dark {
+    background-color: #0a0a0a !important;
+}
+
+/* Text colors */
+.dark-mode .text-muted {
+    color: #aaa !important;
+}
+
+.dark-mode .text-dark {
+    color: #e0e0e0 !important;
+}
+
+/* Borders */
+.dark-mode .border-bottom {
+    border-bottom-color: #333 !important;
+}
+
+/* Activity Items */
+.dark-mode .activity-item {
+    border-bottom-color: #333;
+}
+
+.dark-mode .activity-item::before {
+    background-color: var(--primary-color);
+    border-color: #1e1e1e;
+}
+
+.dark-mode .activity-item::after {
+    background-color: #333;
+}
+
+/* Task Items */
+.dark-mode .task-item {
+    background-color: #252525;
+    border-color: #333;
+}
+
+.dark-mode .task-timer {
+    background: linear-gradient(135deg, #2d2d2d 0%, #333 100%);
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+/* Progress Bars */
+.dark-mode .progress {
+    background-color: #333;
+}
+
+/* Team Avatars */
+.dark-mode .avatar-placeholder {
+    background-color: #2d2d2d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel */
+.dark-mode .carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .carousel-indicators button {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .carousel-indicators button.active {
+    background-color: var(--primary-color);
+}
+
+.dark-mode .carousel-control-prev,
+.dark-mode .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dark-mode .carousel-control-prev:hover,
+.dark-mode .carousel-control-next:hover {
+    background-color: var(--primary-color);
+}
+
+/* Heat Map */
+.dark-mode .heat-map {
+    background: linear-gradient(135deg, #252525 0%, #1e1e1e 100%);
+}
+
+.dark-mode .heat-map::before {
+    background: radial-gradient(circle at center, transparent 0%, rgba(255, 107, 0, 0.1) 100%);
+}
+
+.dark-mode .pizzeria-center {
+    background: #2d2d2d;
+    box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.3),
+        inset 0 0 10px rgba(255, 107, 0, 0.2);
+}
+
+/* Timeline */
+.dark-mode .timeline::before {
+    background: linear-gradient(to bottom, var(--primary-color) 0%, transparent 100%);
+}
+
+.dark-mode .timeline-content {
+    background-color: #252525;
+    border-color: #333;
+}
+
+.dark-mode .timeline-content:hover {
+    border-color: var(--primary-color);
+}
+
+/* Accordion */
+.dark-mode .accordion-button {
+    background-color: #252525;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 107, 0, 0.2);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.dark-mode .accordion-body {
+    background-color: #1e1e1e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+/* Stat Boxes */
+.dark-mode .stat-box {
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.1) 0%, transparent 100%);
+}
+
+.dark-mode .stat-box:hover {
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.2) 0%, rgba(255, 107, 0, 0.1) 100%);
+}
+
+/* Fix for maps in dark mode */
+.dark-mode .map-container iframe {
+    filter: invert(0.9) hue-rotate(180deg) contrast(0.8) brightness(0.9);
+}
+
+/* Chart adjustments for dark mode */
+.dark-mode canvas {
+    filter: brightness(0.9) contrast(1.1);
+}
+
+/* Custom scrollbar for dark mode */
+.dark-mode::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+.dark-mode::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Focus styles for dark mode */
+.dark-mode a:focus,
+.dark-mode button:focus,
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+    outline-color: rgba(255, 107, 0, 0.7);
+}
+
+/* Social icons in dark mode */
+.dark-mode .social-icons a {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .social-icons a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Social links in dark mode */
+.dark-mode .social-links a {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .social-links a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Pizza animation adjustments */
+.dark-mode .pizza-base {
+    filter: brightness(0.9);
+}
+
+/* Loading spinner */
+.dark-mode .spinner {
+    border-color: currentColor;
+    border-right-color: transparent;
+}
+
+/* Toast notifications in dark mode */
+.dark-mode .toast {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+/* Print styles for dark mode */
+@media print {
+    .dark-mode body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .dark-mode .card {
+        border: 1px solid #000 !important;
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Utility classes for dark mode */
+.dark-mode .text-white {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .text-black {
+    color: #121212 !important;
+}
+
+/* Transition for dark mode toggle */
+body.dark-mode * {
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+}
