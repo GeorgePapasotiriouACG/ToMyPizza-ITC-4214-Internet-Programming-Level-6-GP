@@ -11,3 +11,6 @@ APIs: Google Maps Embed API, Quotable API
 Storage: Local Storage API for data persistence
 
 Tools: VS Code, Git, Chrome DevTools
+
+I got all favicons from: https://fontawesome.com/
+And images used from: https://www.imgix.com/?utm_source=images.unsplash.com&utm_medium=referral&utm_campaign=source-config-details
